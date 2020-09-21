@@ -34,7 +34,7 @@ import com.google.mediapipe.glutil.EglManager;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
-    private static final String BINARY_GRAPH_NAME = "mobile_gpu.binarypb";
+    private static final String BINARY_GRAPH_NAME = "mobile_cpu.binarypb";
     private static final String INPUT_VIDEO_STREAM_NAME = "input_video";
     private static final String OUTPUT_VIDEO_STREAM_NAME = "output_video";
     private static final CameraHelper.CameraFacing CAMERA_FACING = CameraHelper.CameraFacing.FRONT;
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     static {
         // Load all native libraries needed by the app.
         System.loadLibrary("mediapipe_jni");
-        System.loadLibrary("opencv_java3");
+        System.loadLibrary("opencv_java4");
     }
 
     // {@link SurfaceTexture} where the camera-preview frames can be accessed.
